@@ -21,13 +21,16 @@ body {
     font-size: 16px; 
     line-height:1.7;
      /*! difference between two lines */
-    color: #777
+    color: #777;
+    padding:30px;
+    
 }
 
 .header{
     height: 95vh;
     /*! it takes the 95 percent of the total box size. you will see a 5% blank area */
     background-image: linear-gradient(to right bottom, rgba(126,213,111,0.8), #28b485), url(../img/hero.jpg);
+    /* rgba= red green blue and opacity: ; */
     /*! 'liniar gradient right' here mixture of two colors starting from left to right: ;  */
     /*! 'liniar gradient right bottom' here mixture of two colors starting from left to right but at the bottom cornder ;  */
     /*! 'liniar gradient right bottom ' here mixture of two colors adn the image starting from left to right but at the bottom cornder ;  */
@@ -35,4 +38,10 @@ body {
     /*! whatever the width of the viewport. 'cover' will try to fit in that width */
     background-position: top ;
     /*! wahtever the viewport size image always stays at  the top of the container  */
+    clip-path: polygon(0 0,100% 0 , 100% 80%, 0 100%);
+      /*! this line cuts the image. you have to set the four co ordinates  */
+      /*! a tool called 'clippy' can be used for this. search in google  */
+    /* clip-path: polygon(0 0,100% 50% , 100% 50%, 0 100%); */
+    /*!this line makes triangle  */
+  
 } 
