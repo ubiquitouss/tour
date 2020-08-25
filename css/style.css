@@ -44,6 +44,7 @@ body {
     /* clip-path: polygon(0 0,100% 50% , 100% 50%, 0 100%); */
     /*!this line makes triangle  */
     position: relative;
+    /*? header image is relative but other contents are absolute. means they move but header stasys fixed relative to them  */
     /*?this position is relative acording to the logo and logo-box  */
 } 
 .logo-box {
@@ -58,15 +59,24 @@ body {
 
 .text-box {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
+    /*! first we fixed a position  */
     transform: translate(-50%,-50%);
+    /*! then we cut the position from the current position. because the whole position wasn't right  */
+    text-align: center;
+    /*! to keep all the texts at the center of the box  */
 }
 
 
 .heading-primary{
     color: #fff;
     text-transform: uppercase;
+
+    /*? animation  */
+    backface-visibility: hidden;
+    /*!this resolves animation shaking. no one knows why  */
+    margin-bottom: 60px;
 }
 
 .heading-primary-main{
@@ -75,10 +85,102 @@ body {
     font-size:60px;
     font-weight: 700;
     letter-spacing: 35px;
+
+
+    /*! Animation part  */
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+
+    /* animation-delay: 3s; */
+    /*! animation will start after 3s of loading the page  */
+
+    /* animation-iteration-count: 3; */
+    /*! animation will happen 3 times  */
+
+    /* animation-timing-function: ease-in; */
+    /*!ease-in== animation is slower and then fast  */
+    /*!ease-out== animation is faster and then slow  */
+
+
+    /*? we can also use animation when hover  */
 }
 .heading-primary-sub{
     display: block;
     font-size:20px;
     font-weight: 700;
     letter-spacing: 17.4px;
+
+    /*! animation part  */
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+    80% {
+        transform: translateX(10px)
+    }
+/* 
+    80% {
+        transform: rotateX(0deg)
+    } */
+    /*! we also have rotation to rotate an animation  */
+
+
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px)
+    }
+    80% {
+        transform: translateX(-10px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+/*! pseudo classes  */
+/*! link state or visited state  */
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    /*! normally it's an inline element. means it doesn't have it's own space. to give it it's own space  */
+    display: inline-block;
+    border-radius: 100px;
+    /*! to make the button from square to radius  */
+
+    /*! Animation short  */
+    transition: all .2s;
+
+}
+
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+.btn.active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #777;
 }
