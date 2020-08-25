@@ -38,10 +38,47 @@ body {
     /*! whatever the width of the viewport. 'cover' will try to fit in that width */
     background-position: top ;
     /*! wahtever the viewport size image always stays at  the top of the container  */
-    clip-path: polygon(0 0,100% 0 , 100% 80%, 0 100%);
+    clip-path: polygon(0 0,100% 0 , 100% 75%, 0 100%);
       /*! this line cuts the image. you have to set the four co ordinates  */
       /*! a tool called 'clippy' can be used for this. search in google  */
     /* clip-path: polygon(0 0,100% 50% , 100% 50%, 0 100%); */
     /*!this line makes triangle  */
-  
+    position: relative;
+    /*?this position is relative acording to the logo and logo-box  */
 } 
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;  
+}
+
+.logo{
+    height: 30px;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main{
+    display: block;
+    /*? this line creates line break  */
+    font-size:60px;
+    font-weight: 700;
+    letter-spacing: 35px;
+}
+.heading-primary-sub{
+    display: block;
+    font-size:20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+}
