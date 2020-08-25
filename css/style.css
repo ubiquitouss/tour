@@ -1,0 +1,38 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+/*! * is a universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     /*! normally when you add 'padding' or 'border' it takes extra space outside. but you*/
+    /*! in border box it doesn't take extra space. it remains inside the space you selsected for the border  */
+}
+
+body {
+    font-family: "Lato", sans-serif;;
+    font-weight: 400;
+    font-size: 16px; 
+    line-height:1.7;
+     /*! difference between two lines */
+    color: #777
+}
+
+.header{
+    height: 95vh;
+    /*! it takes the 95 percent of the total box size. you will see a 5% blank area */
+    background-image: linear-gradient(to right bottom, rgba(126,213,111,0.8), #28b485), url(../img/hero.jpg);
+    /*! 'liniar gradient right' here mixture of two colors starting from left to right: ;  */
+    /*! 'liniar gradient right bottom' here mixture of two colors starting from left to right but at the bottom cornder ;  */
+    /*! 'liniar gradient right bottom ' here mixture of two colors adn the image starting from left to right but at the bottom cornder ;  */
+    background-size: cover;
+    /*! whatever the width of the viewport. 'cover' will try to fit in that width */
+    background-position: top ;
+    /*! wahtever the viewport size image always stays at  the top of the container  */
+} 
