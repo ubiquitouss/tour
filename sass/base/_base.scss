@@ -1,0 +1,19 @@
+/*! * is a universal selector */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*! normally when you add 'padding' or 'border' it takes extra space outside. but you*/
+    /*! in border box it doesn't take extra space. it remains inside the space you selsected for the border  */
+}
+html {
+    // this defines waht 1rem is
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
+

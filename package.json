@@ -1,0 +1,25 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "loading page for nature",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ubiquitouss/tour.git"
+  },
+  "author": "Tawkir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ubiquitouss/tour/issues"
+  },
+  "homepage": "https://github.com/ubiquitouss/tour#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

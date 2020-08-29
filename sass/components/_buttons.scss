@@ -1,0 +1,152 @@
+.btn{
+/*! pseudo classes  */
+/*! link state or visited state  */
+&:link,
+&:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  /*! normally it's an inline element. means it doesn't have it's own space. to give it it's own space  */
+  display: inline-block;
+  border-radius: 100px;
+  /*! to make the button from square to radius means to cut the edge */
+  /*! Animation short  */
+  transition: all .2s;
+  /*!this part is for the animation   */
+  position: relative; }
+
+&:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+
+&.active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+
+&--white {
+  background-color: #fff;
+  color: #777; }
+
+/*! pseudo element  */
+/*! animation shaking when hover  */
+/*? the main theme is ...we have our main button and we will have a similar like button behnd that button  */
+/*? and when we hover it disappears  */
+&::after {
+  content: "";
+  /*! this line doesn't heve anything to do. but it has to be here  */
+  display: inline-block;
+  /*! this line takes it's own space for the button like the 1st button  */
+  height: 100%;
+  width: 100%;
+  /*! these lines will make the 2nd button exxactly like the 1st button .  */
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+&--white::after {
+  background-color: #fff; }
+
+&:hover::after {
+  /* transform: scale(1.5); */
+  /*!this makes buttons 1.5 times biggre. it has to be bigger than 1. 1 is the exact or same size. that's why it won't work  */
+  /* to make it better the code will be like this */
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0; }
+
+&--animated {
+  /* animation-name: moveInButton;
+    animation-duration: .7s;
+    animation-timing-function: ease-in;
+    animation-delay: .75s; */
+  /*! these whole thing can be written in one line  */
+  animation: moveInButton .5s ease-out .75s;
+  /*! normally button stays visible ...and it appears from the down   */
+  /*! but what we want is to move it from the bottom but not visible before it  */
+  /*! the solution is this line  */
+  animation-fill-mode: backwards;
+  /*! this line applies the properties of 0% before the animation starts  */ }
+}
+
+
+//     /*! pseudo classes  */
+//     /*! link state or visited state  */
+//     &:link,
+//     &:visited{
+//         text-transform: uppercase;
+//         text-decoration: none;
+//         padding: 15px 40px;
+
+//        /*! normally it's an inline element. means it doesn't have it's own space. to give it it's own space  */
+//         display: inline-block;
+//         border-radius: 100px;
+//        /*! to make the button from square to radius means to cut the edge */
+
+//        /*! Animation short  */
+//         transition: all .2s;
+
+//       /*!this part is for the animation   */
+//         position: relative;
+
+//     &:hover{
+//         transform: translateY(-10px);
+//         box-shadow: 0 10px 20px rgba($color-black,.2);
+//         &::after{
+//            /* transform: scale(1.5); */
+//            /*!this makes buttons 1.5 times biggre. it has to be bigger than 1. 1 is the exact or same size. that's why it won't work  */
+//            /* to make it better the code will be like this */
+//             transform: scaleX(1.4) scaleY(1.6);
+//             opacity: 0;
+//     }
+// }
+//     &.active{
+//         transform: translateY(-1px);
+//         box-shadow: 0 5px 10px rgba($color-black,.2);
+//     }
+
+//     &--white{
+//         background-color: $color-white;
+//         color: #777;
+//         &::after{ 
+//             background-color: $color-grey-dark;
+//     }
+// }
+    
+//    /*! pseudo element  */
+//    /*! animation shaking when hover  */
+//    /*? the main theme is ...we have our main button and we will have a similar like button behnd that button  */
+//    /*? and when we hover it disappears  */
+//     &::after{
+//         content: "";
+//     /*! this line doesn't heve anything to do. but it has to be here  */
+//         display: inline-block;
+//        /*! this line takes it's own space for the button like the 1st button  */
+//         height: 100%;
+//         width: 100%;
+//        /*! these lines will make the 2nd button exxactly like the 1st button .  */
+//         border-radius: 100px;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         z-index: -1;
+//         transition: all .4s;
+//     }
+// }
+
+//     &--animated{
+//         /* animation-name: moveInButton;
+//         animation-duration: .7s;
+//         animation-timing-function: ease-in;
+//         animation-delay: .75s; */
+//         /*! these whole thing can be written in one line  */
+//         animation: moveInButton .5s ease-out .75s;
+    
+//         /*! normally button stays visible ...and it appears from the down   */
+//         /*! but what we want is to move it from the bottom but not visible before it  */
+//         /*! the solution is this line  */
+//         animation-fill-mode: backwards;
+//     }
+
+// }

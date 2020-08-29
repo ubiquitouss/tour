@@ -1,0 +1,7 @@
+.row {
+    max-width: 114rem;
+    // the difference between width and max width is ..the 'max-width' adopts the screen size change
+    background-color: #eee;
+    margin: 0 auto;
+    // this is used to center the block elements and also for block elements inside the block elements
+}
