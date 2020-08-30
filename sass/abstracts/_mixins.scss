@@ -1,0 +1,9 @@
+@mixin clearfix{
+    &::after{
+        content: "";
+        display: table;
+        clear:both;
+        // this will clear the float both left and right
+    }
+}
+// tis mixin clearfix helps to removte the extrra floats that attatch two rows together 
