@@ -53,9 +53,33 @@ body {
         /*! animation part  */
         animation-name: moveInRight;
         animation-duration: 1s;
-        animation-timing-function: ease-out;
+        animation-timing-function: ease-out
+
     
     }
 }
 
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    // this keeps the background color within the text
+    background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark);
+    // this is the color of the text
+    -webkit-background-clip: text;
+    // this line keeps the color in the text
+    color: transparent;
+    // this line keeps the text invisible
+    transition: all .2sec;
+    letter-spacing: 2px;
+
+
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1); 
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+
+}
 
