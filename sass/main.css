@@ -1,0 +1,444 @@
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  /* 
+    80% {
+        transform: rotateX(0deg)
+    } */
+  /*! we also have rotation to rotate an animation  */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  /* 
+    80% {
+        transform: rotateX(0deg)
+    } */
+  /*! we also have rotation to rotate an animation  */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  80% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  80% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  80% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes moveInButton {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    /* transform: translateX(0) */
+  }
+}
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    /* transform: translateX(0) */
+  }
+}
+
+/*! * is a universal selector */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*! normally when you add 'padding' or 'border' it takes extra space outside. but you*/
+  /*! in border box it doesn't take extra space. it remains inside the space you selsected for the border  */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  /*! difference between two lines */
+  color: #777;
+  padding: 30px;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  /*? animation  */
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  /*!this resolves animation shaking. no one knows why  */
+  margin-bottom: 60px;
+}
+
+.heading-primary--main {
+  display: block;
+  /*? this line creates line break  */
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 35px;
+  /*! Animation part  */
+  -webkit-animation-name: moveInLeft;
+          animation-name: moveInLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  /* animation-delay: 3s; */
+  /*! animation will start after 3s of loading the page  */
+  /* animation-iteration-count: 3; */
+  /*! animation will happen 3 times  */
+  /* animation-timing-function: ease-in; */
+  /*!ease-in== animation is slower and then fast  */
+  /*!ease-out== animation is faster and then slow  */
+  /*? we can also use animation when hover  */
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+  /*! animation part  */
+  -webkit-animation-name: moveInRight;
+          animation-name: moveInRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-transition: all .2sec;
+  transition: all .2sec;
+  letter-spacing: 2px;
+}
+
+.heading-secondary:hover {
+  -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
+          transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}
+
+.paragraph:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  /*! pseudo classes  */
+  /*! link state or visited state  */
+  /*! pseudo element  */
+  /*! animation shaking when hover  */
+  /*? the main theme is ...we have our main button and we will have a similar like button behnd that button  */
+  /*? and when we hover it disappears  */
+}
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  /*! normally it's an inline element. means it doesn't have it's own space. to give it it's own space  */
+  display: inline-block;
+  border-radius: 100px;
+  /*! to make the button from square to radius means to cut the edge */
+  /*! Animation short  */
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  /*!this part is for the animation   */
+  position: relative;
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn.active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn::after {
+  content: "";
+  /*! this line doesn't heve anything to do. but it has to be here  */
+  display: inline-block;
+  /*! this line takes it's own space for the button like the 1st button  */
+  height: 100%;
+  width: 100%;
+  /*! these lines will make the 2nd button exxactly like the 1st button .  */
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.btn--white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  /* transform: scale(1.5); */
+  /*!this makes buttons 1.5 times biggre. it has to be bigger than 1. 1 is the exact or same size. that's why it won't work  */
+  /* to make it better the code will be like this */
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+          transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn--animated {
+  /* animation-name: moveInButton;
+    animation-duration: .7s;
+    animation-timing-function: ease-in;
+    animation-delay: .75s; */
+  /*! these whole thing can be written in one line  */
+  -webkit-animation: moveInButton .5s ease-out .75s;
+          animation: moveInButton .5s ease-out .75s;
+  /*! normally button stays visible ...and it appears from the down   */
+  /*! but what we want is to move it from the bottom but not visible before it  */
+  /*! the solution is this line  */
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  /*! this line applies the properties of 0% before the animation starts  */
+}
+
+.btn-text:link, .btn-text:visited {
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 3px;
+}
+
+.header {
+  height: 95vh;
+  /*! it takes the 95 percent of the total box size. you will see a 5% blank area */
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  /* rgba= red green blue and opacity: ; */
+  /*! 'liniar gradient right' here mixture of two colors starting from left to right: ;  */
+  /*! 'liniar gradient right bottom' here mixture of two colors starting from left to right but at the bottom cornder ;  */
+  /*! 'liniar gradient right bottom ' here mixture of two colors adn the image starting from left to right but at the bottom cornder ;  */
+  background-size: cover;
+  /*! whatever the width of the viewport. 'cover' will try to fit in that width */
+  background-position: top;
+  /*! wahtever the viewport size image always stays at  the top of the container  */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  /*! this line cuts the image. you have to set the four co ordinates  */
+  /*! a tool called 'clippy' can be used for this. search in google  */
+  /* clip-path: polygon(0 0,100% 50% , 100% 50%, 0 100%); */
+  /*!this line makes triangle  */
+  position: relative;
+  /*? header image is relative but other contents are absolute. means they move but header stasys fixed relative to them  */
+  /*?this position is relative acording to the logo and logo-box  */
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.header__logo {
+  height: 30px;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  /*! first we fixed a position  */
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  /*! then we cut the position from the current position. because the whole position wasn't right  */
+  text-align: center;
+  /*! to keep all the texts at the center of the box  */
+}
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row [class^="col-"] {
+  float: left;
+}
+
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 6rem)/2);
+}
+
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem)/3);
+}
+
+.row .col-2-of-3 {
+  width: calc( 2* ((100% - 2 * 6rem)/3) + 6rem);
+}
+
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem)/4);
+}
+
+.row .col-2-of-4 {
+  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+}
+
+.row .col-3-of-4 {
+  width: calc(3 * ((100% - 3 * 6rem)/4) + 2 * 6rem);
+}
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 30rem 0;
+  margin-top: -25vh;
+}
+/*# sourceMappingURL=main.css.map */
