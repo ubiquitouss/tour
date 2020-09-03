@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/ubiquitouss/tour#readme",
   "dependencies": {
-    "live-server": "^1.2.1"
+    "live-server": "^1.2.1",
+    "node-sass": "^4.14.1",
+    "sass": "^1.26.10"
   },
-  "devDependencies": {
-    "node-sass": "^4.14.1"
-  }
+  "devDependencies": {}
 }

@@ -10,6 +10,7 @@
     /*! whatever the width of the viewport. 'cover' will try to fit in that width */
     background-position: top ;
     /*! wahtever the viewport size image always stays at  the top of the container  */
+    -webkit-clip-path: polygon(0 0,100% 0 , 100% 75%, 0 100%);
     clip-path: polygon(0 0,100% 0 , 100% 75%, 0 100%);
       /*! this line cuts the image. you have to set the four co ordinates  */
       /*! a tool called 'clippy' can be used for this. search in google  */

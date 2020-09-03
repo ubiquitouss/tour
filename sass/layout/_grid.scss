@@ -1,7 +1,7 @@
 .row {
     max-width: $grid-width;
     // the difference between width and max width is ..the 'max-width' adopts the screen size change
-    background-color: #eee;
+    // background-color: #eee;
     margin:0 auto;
      // this is used to center the block elements and also for block elements inside the block element
     &:not(:last-child) {
